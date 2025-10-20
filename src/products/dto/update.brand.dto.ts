@@ -1,10 +1,4 @@
-import { ApiProperty } from '@nestjs/swagger';
+import { OmitType, PartialType } from '@nestjs/swagger';
+import CreateBrandDto from './create.brand.dto';
 
-export default class UpdateBrandDto {
-    @ApiProperty({
-        description: 'Nome da Marca',
-        required: true,
-        example: "Adidas",
-    })
-    readonly name: string;
-}
+export default class UpdateBrandDto extends PartialType(CreateBrandDto) {}
