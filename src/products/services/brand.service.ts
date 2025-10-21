@@ -27,8 +27,15 @@ export class BrandService {
         return this.brandRepository.save(brand);
     }
 
-    update(id: number, updateBrandDto: UpdateBrandDto): Promise<Brand> {
-        return this.brandRepository.save({ id, ...updateBrandDto });
+    async update(id: number, updateBrandDto: UpdateBrandDto): Promise<Brand> {
+        const brand = await this.brandRepository.findOne({
+            where: { id },
+        });
+
+        if (!brand) throw new Error('Brand not found');
+
+        Object.assign(brand, updateBrandDto);
+        return this.brandRepository.save(brand);
     }
 
     async remove(brand: Brand): Promise<void> {
