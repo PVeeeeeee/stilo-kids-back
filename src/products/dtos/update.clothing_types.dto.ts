@@ -1,10 +1,5 @@
-import { ApiProperty } from '@nestjs/swagger';
+import { PartialType } from '@nestjs/swagger';
+import CreateClothing_typesDto from './create.clothing_types.dto';
 
-export default class UpdateClothing_typeDto {
-    @ApiProperty({
-        description: 'Nome do Tipo de Roupa',
-        required: true,
-        example: "Calça",
-    })
-    readonly name: string;
-}
+
+export default class UpdateClothing_typesDto extends PartialType(CreateClothing_typesDto) {}
