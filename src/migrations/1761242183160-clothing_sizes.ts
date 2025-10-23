@@ -25,7 +25,7 @@ export class CreateClothingSizesTable1680000000000 implements MigrationInterface
 
         await queryRunner.query(`
             INSERT INTO clothing_sizes (size) VALUES
-            ('PP'), ('P'), ('M'), ('G'), ('GG')
+            ('P'), ('M'), ('G'), ('GG')
         `);
     }
 
