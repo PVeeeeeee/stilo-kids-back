@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { Clothing_types } from '../entities/clothing_types.etity';
+import { Clothing_types } from '../entities/clothing_types.entity';
 
 export default class Clothing_typesDto {
     @ApiProperty({
