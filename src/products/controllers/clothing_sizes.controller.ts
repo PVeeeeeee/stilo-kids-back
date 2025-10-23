@@ -26,7 +26,6 @@ export class Clothing_sizesController {
         return Clothing_sizess.map((Clothing_sizes) => new Clothing_sizesDto(Clothing_sizes));
     }
 
-
     @Get(':id')
     @ApiOkResponse({
         description: 'Tamanho da Roupa retornado com sucesso.',
