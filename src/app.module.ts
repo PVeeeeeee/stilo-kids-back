@@ -28,7 +28,7 @@ import { ProductModule } from './products/product.module';
       migrations: [__dirname + '/migrations/*{.ts,.js}'],
     }),
     SupplierModule,
-    ProductModule,
+    ProductModule
   ],
   controllers: [AppController],
   providers: [AppService],
